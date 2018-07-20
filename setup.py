@@ -1,40 +1,12 @@
-"""
-A cli utility to help run things or not run things based on if it is a public
-holiday. The command exits 0 if today is a public holiday and exits 1 if not.
+#  python-publicholiday
+#  ---------------
+#  A fast, efficient command line utility for working with public holidays
+#
+#  Author:  Tim Birkett <tim.birkettdev@devopsmakers.com>
+#  Website: https://github.com/timbirk/python-publicholiday
+#  License: Unlicense (see LICENSE file)
 
-Installation: `pip install publicholiday`
-
-Examples usage:
-```
-$ publicholiday --help
-Usage: publicholiday [OPTIONS]
-
-  Is it a public holiday?
-
-Options:
-  -c, --country TEXT  Supported country name or code.
-  --help              Show this message and exit.
-
-# Run a script on a public holiday
-$ publicholiday && /thing/to/run.sh
-
-# Don't run a thing on public holidays
-$ publicholiday || /thing/to/run.sh
-```
-
-By default `publicholiday` will check against UK public holidays. You can change
-this by passing a supported country:
-```
-# Run a script on a Argentinian public holiday
-$ publicholiday -c Argentina && /thing/to/run.sh
-
-# Don't run a thing on US public holidays
-$ publicholiday -c US || /thing/to/run.sh
-```
-
-This utility uses the `holidays` pip package, to find out if your country is
-supported see: https://pypi.org/project/holidays/
-"""
+import codecs
 from setuptools import find_packages, setup
 
 dependencies = [
@@ -44,13 +16,14 @@ dependencies = [
 
 setup(
     name='publicholiday',
-    version='0.1.1',
+    version='0.1.3',
     url='https://github.com/timbirk/python-publicholiday',
     license='BSD',
     author='Tim Birkett',
     author_email='tim.birkett@devopsmakers.com',
     description='Is it a public holiday?',
-    long_description=__doc__,
+    long_description=codecs.open('README.md', encoding='utf-8').read(),
+    long_description_content_type='text/markdown',
     packages=find_packages(exclude=['tests']),
     include_package_data=True,
     zip_safe=False,

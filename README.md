@@ -1,4 +1,9 @@
-# python-publicholiday [![Build Status](https://travis-ci.org/timbirk/python-publicholiday.svg?branch=master)](https://travis-ci.org/timbirk/python-publicholiday)
+# python-publicholiday
+
+[![Build Status](https://travis-ci.org/timbirk/python-publicholiday.svg?branch=master)](https://travis-ci.org/timbirk/python-publicholiday)
+[![Coverage Status](https://coveralls.io/repos/github/timbirk/python-publicholiday/badge.svg?branch=master)](https://coveralls.io/github/timbirk/python-publicholiday?branch=master)
+[![PyPI version](https://badge.fury.io/py/publicholiday.svg)](https://badge.fury.io/py/publicholiday)
+
 A cli utility to help run things or not run things based on if it is a public
 holiday. The command exits 0 if today is a public holiday and exits 1 if not.
 
