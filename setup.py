@@ -1,5 +1,5 @@
 """
-Is it a bank holiday?
+Is it a public holiday?
 """
 from setuptools import find_packages, setup
 
@@ -15,7 +15,7 @@ setup(
     license='BSD',
     author='Tim Birkett',
     author_email='tim.birkett@devopsmakers.com',
-    description='Is it a bank holiday?',
+    description='Is it a public holiday?',
     long_description=__doc__,
     packages=find_packages(exclude=['tests']),
     include_package_data=True,
