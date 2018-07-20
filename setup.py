@@ -9,9 +9,9 @@ dependencies = [
 ]
 
 setup(
-    name='isholiday',
+    name='publicholiday',
     version='0.1.0',
-    url='https://github.com/timbirk/python-isholiday',
+    url='https://github.com/timbirk/python-publicholiday',
     license='BSD',
     author='Tim Birkett',
     author_email='tim.birkett@devopsmakers.com',
@@ -24,7 +24,7 @@ setup(
     install_requires=dependencies,
     entry_points={
         'console_scripts': [
-            'isholiday = isholiday.cli:main',
+            'publicholiday = publicholiday.cli:main',
         ],
     },
     classifiers=[

@@ -10,7 +10,7 @@ from datetime import date
 @click.option('--country', '-c', default='UK',
               help='Country you are running in.')
 def main(country):
-    """Is it a bank holiday?"""
+    """Is it a public holiday?"""
 
     logging.basicConfig(format='[%(levelname)s] %(message)s')
     try:

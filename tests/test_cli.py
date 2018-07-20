@@ -1,6 +1,6 @@
 import pytest
 from click.testing import CliRunner
-from isholiday import cli
+from publicholiday import cli
 
 
 @pytest.fixture
