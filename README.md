@@ -23,7 +23,7 @@ Options:
 # Run a script on a public holiday
 $ publicholiday && /thing/to/run.sh
 
-# Don't run a thing on public holidays
+# Run a script on all days that are not public holidays
 $ publicholiday || /thing/to/run.sh
 ```
 
@@ -33,7 +33,7 @@ this by passing a supported country:
 # Run a script on a Argentinian public holiday
 $ publicholiday -c Argentina && /thing/to/run.sh
 
-# Don't run a thing on US public holidays
+# Run a script on all days that are not US public holidays
 $ publicholiday -c US || /thing/to/run.sh
 ```
 
