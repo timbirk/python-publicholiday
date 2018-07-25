@@ -28,11 +28,18 @@ def test_cli_with_strangecase_country(runner, caplog):
     assert caplog.text == ''
 
 
-def test_cli_with_non_country(runner, caplog):
+def test_cli_with_non_callable(runner, caplog):
     result = runner.invoke(cli.main, ['--country', 'MONDAY'])
     assert result.exception
     assert result.exit_code == 127
     assert 'Country: MONDAY not found.' in caplog.text
+
+
+def test_cli_with_callable(runner, caplog):
+    result = runner.invoke(cli.main, ['--country', 'rd'])
+    assert result.exception
+    assert result.exit_code == 127
+    assert 'Country: rd not found.' in caplog.text
 
 
 def test_cli_with_unknown_country(runner, caplog):

@@ -20,7 +20,8 @@ def main(country):
 
     try:
         country_holidays = getattr(holidays, country_name)()
-        isinstance(country_holidays, holidays.HolidayBase)
+        if not isinstance(country_holidays, holidays.HolidayBase):
+            raise TypeError
     except (TypeError, AttributeError):
         logging.error("Country: %s not found." % country)
         sys.exit(127)
