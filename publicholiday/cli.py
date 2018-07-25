@@ -19,14 +19,10 @@ def main(country):
                          country.lower() == x.lower()), '')
 
     try:
-        country_holidays = getattr(holidays, country_name)
-        try:
-            isinstance(country_holidays(), holidays.HolidayBase)
-        except TypeError:
-            raise AttributeError
-
-    except AttributeError:
+        country_holidays = getattr(holidays, country_name)()
+        isinstance(country_holidays, holidays.HolidayBase)
+    except (TypeError, AttributeError):
         logging.error("Country: %s not found." % country)
         sys.exit(127)
 
-    sys.exit(date.today() not in country_holidays())
+    sys.exit(date.today() not in country_holidays)
