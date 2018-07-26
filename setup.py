@@ -16,7 +16,7 @@ dependencies = [
 
 setup(
     name='publicholiday',
-    version='0.1.7',
+    version='0.1.8',
     url='https://github.com/timbirk/python-publicholiday',
     license='BSD',
     author='Tim Birkett',
